@@ -23,10 +23,10 @@ const ResponsiveMetricsGrid = ({
     width: initialWidth,
     height: initialHeight,
   });
-  const [viewportDimensions, setViewportDimensions] = useState({
-    width: typeof window !== "undefined" ? window.innerWidth : 1200,
-    height: typeof window !== "undefined" ? window.innerHeight : 800,
-  });
+  // const [viewportDimensions, setViewportDimensions] = useState({
+  //   width: typeof window !== "undefined" ? window.innerWidth : 1200,
+  //   height: typeof window !== "undefined" ? window.innerHeight : 800,
+  // });
 
   // state to track desired number of rows
   const [desiredRows, setDesiredRows] = useState(1);
@@ -36,10 +36,10 @@ const ResponsiveMetricsGrid = ({
     if (typeof window === "undefined") return;
 
     const updateDimensions = () => {
-      setViewportDimensions({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
+      // setViewportDimensions({
+      //   width: window.innerWidth,
+      //   height: window.innerHeight,
+      // });
     };
 
     window.addEventListener("resize", updateDimensions);
@@ -109,7 +109,7 @@ const ResponsiveMetricsGrid = ({
       numColumns: finalColumns,
       numRows: finalRows,
     };
-  }, [gridSize, data.length, desiredRows]);
+  }, [gridSize, desiredRows, data]);
 
   // Calculate the maximum text lengths for consistent sizing
   const maxValueLength = useMemo(
@@ -230,12 +230,6 @@ const ResponsiveMetricsGrid = ({
     );
   };
 
-  // Debug info to show current layout state
-  const debugInfo = {
-    gridSize: `${Math.round(gridSize.width)}×${Math.round(gridSize.height)}`,
-    layout: `${numColumns}×${numRows}`,
-    desiredRows: desiredRows,
-  };
 
   // Increase margins to create more space between cells
   const layoutSettings = {
