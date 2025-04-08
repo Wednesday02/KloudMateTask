@@ -1,4 +1,4 @@
-// font size calculation
+
 const calculateFontSize = (
   containerWidth,
   containerHeight,
@@ -22,7 +22,7 @@ const calculateFontSize = (
     ? 0.5
     : 0.4;
 
-  // Calculate size based on container dimensions
+  // Calculated size based on container dimensions
   const widthBasedSize = containerWidth / (textLength * widthFactor);
   const heightBasedSize = containerHeight * heightFactor;
 
