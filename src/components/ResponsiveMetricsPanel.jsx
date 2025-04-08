@@ -23,10 +23,7 @@ const ResponsiveMetricsGrid = ({
     width: initialWidth,
     height: initialHeight,
   });
-  // const [viewportDimensions, setViewportDimensions] = useState({
-  //   width: typeof window !== "undefined" ? window.innerWidth : 1200,
-  //   height: typeof window !== "undefined" ? window.innerHeight : 800,
-  // });
+ 
 
   // state to track desired number of rows
   const [desiredRows, setDesiredRows] = useState(1);
@@ -193,7 +190,7 @@ const ResponsiveMetricsGrid = ({
           overflow: "hidden",
           boxSizing: "border-box",
           boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
-          margin: "auto", // Center in cell
+          margin: "auto", 
         }}
       >
         <div
@@ -264,8 +261,8 @@ const ResponsiveMetricsGrid = ({
           color: "#fff",
           fontSize: "12px",
           opacity: 0.8,
-          zIndex: 10, // Increased z-index
-          backgroundColor: "rgba(17, 17, 17, 0.7)", // Semi-transparent background
+          zIndex: 10, 
+          backgroundColor: "rgba(17, 17, 17, 0.7)", 
           padding: "2px 4px",
           borderRadius: "2px",
           maxWidth: "40%",
@@ -297,7 +294,7 @@ const ResponsiveMetricsGrid = ({
         useCSSTransforms={false}
         preventCollision={false}
         autoSize={true}
-        // Add more space at the top to avoid overlap with the header
+        
         style={{ paddingTop: "24px" }}
       >
         {data.map((item, index) => (
